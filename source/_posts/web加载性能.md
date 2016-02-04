@@ -4,7 +4,7 @@ tags:
 ---
 ## DOM和页面内容基本特征
 
-1. HTML parse 为DOM的过程（初步的Layout）不受页面内标签影响，见test1
+1. HTML parse 为DOM的过程（初步的Layout）不受页面内标签影响
 
 2. ‘同步’的script的加载会阻塞所有(没有优化的情况下)后续资源的加载;css由于不会修改DOM加载都是并行的, 但是可能阻塞‘同时’访问对应属性的script
 
