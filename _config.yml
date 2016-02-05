@@ -3,12 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Danzzer Blog
+title: Danzzer's Blog
 subtitle:
-description: Some thoughts here
+description: My thoughts here
 author: Danzzer
-language:
+language: zh-cn
 timezone:
+keyword: 
+- danzzer
+- developer
+
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -34,7 +38,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -62,8 +66,16 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: http://hexo.io/plugins/
+plugins:
+- hexo-generator-sitemap
 ## Themes: http://hexo.io/themes/
-theme: landscape
+theme: tranquilpeak
+
+# RSS
+feed:
+    type: atom
+    path: atom.xml
+    limit: 20
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
