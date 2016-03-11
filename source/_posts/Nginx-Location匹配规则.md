@@ -33,6 +33,23 @@ B. 进行正则匹配，按照书写顺序第一个满足的将被使用且停�
 C. 如果A3有匹配则使用该规则
 D. 无匹配则4XX
 
+## 可能常用写法(注意规则顺序)
+
+```
+location = /B/test.html {
+}
+
+location ^~ /B/C {
+}
+
+location ~ /B/.*$ {
+}
+
+location ~ /(.*)$ {
+    #此处使用正则捕获, $1可以取出匹配的uri，当然也可以用nginx的变量实现
+}
+
+```
 ## 来源Blog
 digitalocean上的此篇[Blog](https://www.digitalocean.com/community/tutorials/understanding-nginx-server-and-location-block-selection-algorithms)不错，推荐下
 	
